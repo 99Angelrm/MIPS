@@ -1,0 +1,64 @@
+# Compile of control.sv was successful.
+# Compile of MIPS.sv was successful.
+# Compile of MIPS_tb.sv was successful.
+# Compile of registers.sv was successful.
+# Compile of registers_tb.sv was successful.
+# Compile of control_tb.sv failed with 2 errors.
+# 6 compiles, 1 failed with 2 errors.
+# Error opening C:/Quartus/MIPS/(vlog-13069) C:/Quartus/MIPS/control_tb.sv
+# Path name 'C:/Quartus/MIPS/(vlog-13069) C:/Quartus/MIPS/control_tb.sv' doesn't exist.
+# Error opening C:/Quartus/MIPS/(vlog-13069) C:/Quartus/MIPS/control_tb.sv
+# Path name 'C:/Quartus/MIPS/(vlog-13069) C:/Quartus/MIPS/control_tb.sv' doesn't exist.
+# Compile of control.sv was successful.
+# Compile of MIPS.sv was successful.
+# Compile of MIPS_tb.sv was successful.
+# Compile of registers.sv was successful.
+# Compile of registers_tb.sv was successful.
+# Compile of control_tb.sv was successful.
+# 6 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of control.sv was successful.
+# Compile of MIPS.sv was successful.
+# Compile of MIPS_tb.sv was successful.
+# Compile of registers.sv was successful.
+# Compile of registers_tb.sv was successful.
+# Compile of control_tb.sv was successful.
+# 6 compiles, 0 failed with no errors.
+# Load canceled
+vsim -gui work.control_tb
+# vsim -gui work.control_tb 
+# Start time: 14:40:43 on Sep 17,2021
+# Loading sv_std.std
+# Loading work.control_tb
+# Loading work.control_sv_unit
+# Loading work.control
+add wave -position end  sim:/control_tb/control/AluControl
+add wave -position end  sim:/control_tb/control/ALUSrc
+add wave -position end  sim:/control_tb/control/Branch
+add wave -position end  sim:/control_tb/control/instruction
+add wave -position end  sim:/control_tb/control/instruction_2
+add wave -position end  sim:/control_tb/control/jmp
+add wave -position end  sim:/control_tb/control/MemRead
+add wave -position end  sim:/control_tb/control/MemtoReg
+add wave -position end  sim:/control_tb/control/MemWrite
+add wave -position end  sim:/control_tb/control/operation
+add wave -position end  sim:/control_tb/control/RegDst
+add wave -position end  sim:/control_tb/control/RegWrite
+add wave -position 0  sim:/control_tb/fullinstruction
+run
+restart
+# Compile of control.sv was successful.
+# Compile of MIPS.sv was successful.
+# Compile of MIPS_tb.sv was successful.
+# Compile of registers.sv was successful.
+# Compile of registers_tb.sv was successful.
+# Compile of control_tb.sv was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.control_tb
+# Loading work.control_sv_unit
+# Loading work.control
+run
+# End time: 15:30:12 on Sep 17,2021, Elapsed time: 0:49:29
+# Errors: 0, Warnings: 2

@@ -1,2 +1,2 @@
 module MIPS_tb();
-endmodule
+endmodule;
