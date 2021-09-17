@@ -1,0 +1,9 @@
+module sign_extend(
+	input logic [15:0] instruction,
+	ouput logic [31:0] sign_extend
+
+);
+
+always_comb sign_extend = instruction[15] ? 32h'FFFF0000 + instruction : 32h'00000000 + instruction;
+
+endmodule

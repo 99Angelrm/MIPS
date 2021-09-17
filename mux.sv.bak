@@ -1,0 +1,13 @@
+module mux(
+	input logic [31:0] read_data_2,
+	input logic [31:0] sign_extend,
+	input logic ALUSrc,
+	output logic [31:0] muxout
+
+);
+
+always_comb muxout = (ALUSrc==0) ? read_data_2:
+							(ALUSrc==1) ? sign_extend:
+							1'bx;
+							
+endmodule

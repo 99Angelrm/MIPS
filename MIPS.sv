@@ -7,7 +7,7 @@ module MIPS (
 
 	);
 
-	logic [31:0] addr;
+	logic [31:0] addr,muxout_alusrc,datamem_out,alu_result;
 	logic [31:0] inst;
 	logic [4:0] WriteRegister;
 
@@ -63,5 +63,46 @@ module MIPS (
 	.Rd_data_1(ReadData_1),
    	.Rd_data_2(ReadData_2)
 	);
+	
+	multiplexer mux_alusrc(
+		.A(ReadData_2),
+		.B(signExtend),
+		.control_signal(ALUSrc),
+		.muxout(muxout_alusrc)
+	
+	);
+	
+	ALU alu(
+		.read_data_1(ReadData_1),
+		.mux_alu_src(muxout_alusrc),
+		.control_input(AluControl),
+		.alu_result(alu_result)
+	
+	);
+	
+	datamem datamem(
+		.clk(clk),
+		.rst(rst),
+		.address(alu_result),
+		.rd(MemRead),
+		.wr(MemWrite),
+		.W_data(ReadData_2),
+		.R_data(datamem_out)
+	);
+	
+	multiplexer mux_datamem(
+		.A(alu_result),
+		.B(datamem_out),
+		.control_signal(MemtoReg),
+		.muxout(WriteData)
+	
+	);
+	
+	sign_extend sign_extend(
+		.instruction(inst[15:0]),
+		.sign_extend(signExtend)
+	);
+	
+	
 
 endmodule
