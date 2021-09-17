@@ -9,7 +9,6 @@ module MIPS (
 
 	logic [31:0] addr;
 	logic [31:0] inst;
-	logic [4:0] WriteRegister;
 
 	always_comb pc_out = addr;
 
@@ -37,31 +36,5 @@ module MIPS (
 		.clk('0)
 
 		);
-	control control(
-		.instruction(inst[31:26]),
-		.instruction_2(inst[5:0]),
-		.jmp(jmp),
-		.RegDst(RegDst),
-		.Branch(branch),
-		.MemRead(MemRead),
-		.MemtoReg(MemtoReg),
-		.AluControl(AluControl),
-		.MemWrite(MemWrite),
-		.ALUSrc(ALUSrc),
-		.RegWrite(RegWrite)
-	);
-
-	always_comb WriteRegister = RegDst ? inst[15:11] : inst[20:16];
-	registers registers(
-	.clk(clk),
-	.rst(rst),
-	.RegWrite(RegWrite),
-	.Reg_1_addr(inst[25:21]),
-	.Reg_2_addr(inst[20:16]),
-	.Write_reg(	WriteRegister),
-	.Write_data(WriteData),
-	.Rd_data_1(ReadData_1),
-   	.Rd_data_2(ReadData_2)
-	);
 
 endmodule
