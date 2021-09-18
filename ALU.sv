@@ -12,7 +12,7 @@ always_comb alu_result = (control_input==0) ? read_data_1 & mux_alu_src :
 								 (control_input==1) ? read_data_1 | mux_alu_src :
 								 (control_input==2) ? read_data_1 + mux_alu_src :
 								 (control_input==6) ? read_data_1 - mux_alu_src :
-								 (control_input==7) & (read_data_1 <= mux_alu_src) ? 32'hFFFFFFFF:
+								 (control_input==7) & (read_data_1 <= mux_alu_src) ? 32'h00000001:
 								 (control_input==7) & ~(read_data_1 <= mux_alu_src) ? 32'h00000000:
 								 (control_input==12) ? ~(read_data_1 | mux_alu_src) :
 								 1'bx;
