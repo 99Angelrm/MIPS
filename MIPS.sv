@@ -7,9 +7,11 @@ module MIPS (
 
 	);
 
-	logic [31:0] addr,muxout_alusrc,datamem_out,alu_result;
-	logic [31:0] inst;
+	
+	logic [31:0] addr,muxout_alusrc,datamem_out,alu_result,signExtend;
+	logic [31:0] inst,WriteData,ReadData_1,ReadData_2;
 	logic [4:0] WriteRegister;
+	logic [3:0] AluControl;
 
 	always_comb pc_out = addr;
 
@@ -29,7 +31,7 @@ module MIPS (
 	instructionmem instructionmem (
 
 		.raddr(addr), 
-		.ren('0), 
+		.ren('1), 
 		.data_out(inst), 
 		.waddr('0), 
 		.data_in('0), 
@@ -76,7 +78,8 @@ module MIPS (
 		.read_data_1(ReadData_1),
 		.mux_alu_src(muxout_alusrc),
 		.control_input(AluControl),
-		.alu_result(alu_result)
+		.alu_result(alu_result),
+		.zero(zero)
 	
 	);
 	
