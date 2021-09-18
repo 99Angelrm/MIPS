@@ -1,0 +1,22 @@
+module datamem (
+	input logic clk,
+	input logic rst,
+	input logic [31:0] adress,
+	input logic rd,
+	input logic wr,
+	input logic [31:0] W_data,
+	ouput logic [31:0] R_data
+);
+
+logic [31:0] mem_array [0:4294967295];
+
+	always_ff @ (posedge clk)
+		begin
+			if(wr)
+				mem_array[adress]<=W_data;
+		end
+		
+	
+	always_comb R_data = rd ? mem_array[address] : 'Z;
+	
+endmodule
