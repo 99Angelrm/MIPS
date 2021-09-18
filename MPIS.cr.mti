@@ -1,4 +1,39 @@
-C:/Quartus/MIPS/control.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/control.sv
+C:/Quartus/MIPS/instructionmem.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/instructionmem.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module instructionmem
+
+Top level modules:
+	instructionmem
+
+} {} {}} C:/Quartus/MIPS/ALU.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/ALU.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Quartus/MIPS/registers_tb.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/registers_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module registers_tb
+
+Top level modules:
+	registers_tb
+
+} {} {}} C:/Quartus/MIPS/registers.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/registers.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module registers
+
+Top level modules:
+	registers
+
+} {} {}} C:/Quartus/MIPS/sign_extend.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/sign_extend.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_extend
+
+Top level modules:
+	sign_extend
+
+} {} {}} C:/Quartus/MIPS/control.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/control.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling package control_sv_unit
 -- Compiling module control
@@ -13,19 +48,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	MIPS
 
-} {} {}} C:/Quartus/MIPS/registers_tb.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/registers_tb.sv
+} {} {}} C:/Quartus/MIPS/datamem.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/datamem.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module registers_tb
+-- Compiling module datamem
 
 Top level modules:
-	registers_tb
+	datamem
 
-} {} {}} C:/Quartus/MIPS/control_tb.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/control_tb.sv
+} {} {}} C:/Quartus/MIPS/multiplexer.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/multiplexer.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module control_tb
+-- Compiling module multiplexer
 
 Top level modules:
-	control_tb
+	multiplexer
+
+} {} {}} C:/Quartus/MIPS/pc.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/pc.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module pc
+
+Top level modules:
+	pc
 
 } {} {}} C:/Quartus/MIPS/MIPS_tb.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/MIPS_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -34,11 +76,11 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	MIPS_tb
 
-} {} {}} C:/Quartus/MIPS/registers.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/registers.sv
+} {} {}} C:/Quartus/MIPS/control_tb.sv {1 {vlog -work work -sv -stats=none C:/Quartus/MIPS/control_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module registers
+-- Compiling module control_tb
 
 Top level modules:
-	registers
+	control_tb
 
 } {} {}}
