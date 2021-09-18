@@ -66,7 +66,9 @@ t_cntrl_operation	operation;   	// Enumerated Defined type variable for operatio
 							AluControl = 4'h2;
 						end
 		   ADDI	:	begin
-							
+							RegWrite   = 1'b1;
+							AluControl = 4'h2;
+							ALUSrc	   = 1'b1;
 						end
 		   SUB	: 	begin
 							RegDst     = 1'b1;
