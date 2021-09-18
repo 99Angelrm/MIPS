@@ -38,7 +38,7 @@ MIPS uut(
 			uut.datamem.mem_array[i] = {8'h0,randdata[7:0]};  
 			end	
 
-uut.instructionmem.mem_array[0] = 32'b001000 00010 00000 0000000000000011;
+uut.instructionmem.mem_array[0] = 32'b00100000010000010000000000000011;
 
 
 		
