@@ -13,7 +13,7 @@
 # 12 compiles, 0 failed with no errors.
 vsim -gui work.MIPS_tb
 # vsim -gui work.MIPS_tb 
-# Start time: 15:37:16 on Sep 18,2021
+# Start time: 23:27:06 on Sep 18,2021
 # Loading sv_std.std
 # Loading work.MIPS_tb
 # Loading work.MIPS
@@ -26,88 +26,17 @@ vsim -gui work.MIPS_tb
 # Loading work.ALU
 # Loading work.datamem
 # Loading work.sign_extend
-add wave -position end  sim:/MIPS_tb/uut/clk
-add wave -position end  sim:/MIPS_tb/uut/clr
-add wave -position end  sim:/MIPS_tb/uut/pc_out
-add wave -position end  sim:/MIPS_tb/uut/rst
-add wave -position end  sim:/MIPS_tb/uut/control/operation
-add wave -position end  sim:/MIPS_tb/uut/datamem/mem_array
-add wave -position end  sim:/MIPS_tb/uut/instructionmem/mem_array
-add wave -position end  sim:/MIPS_tb/uut/registers/mem
+add wave -position insertpoint  \
+sim:/MIPS_tb/uut/clk \
+sim:/MIPS_tb/uut/clr \
+sim:/MIPS_tb/uut/pc_out \
+sim:/MIPS_tb/uut/rst
+add wave -position insertpoint  \
+sim:/MIPS_tb/uut/control/operation
+add wave -position insertpoint  \
+sim:/MIPS_tb/uut/datamem/mem_array
+add wave -position insertpoint  \
+sim:/MIPS_tb/uut/instructionmem/mem_array
+add wave -position insertpoint  \
+sim:/MIPS_tb/uut/registers/mem
 run
-# WARNING: No extended dataflow license exists
-# Compile of control.sv was successful.
-# Compile of MIPS.sv was successful.
-# Compile of MIPS_tb.sv failed with 1 errors.
-# Compile of registers.sv was successful.
-# Compile of registers_tb.sv was successful.
-# Compile of control_tb.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of datamem.sv was successful.
-# Compile of instructionmem.sv was successful.
-# Compile of multiplexer.sv was successful.
-# Compile of pc.sv was successful.
-# Compile of sign_extend.sv was successful.
-# 12 compiles, 1 failed with 1 error.
-# Compile of control.sv was successful.
-# Compile of MIPS.sv was successful.
-# Compile of MIPS_tb.sv was successful.
-# Compile of registers.sv was successful.
-# Compile of registers_tb.sv was successful.
-# Compile of control_tb.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of datamem.sv was successful.
-# Compile of instructionmem.sv was successful.
-# Compile of multiplexer.sv was successful.
-# Compile of pc.sv was successful.
-# Compile of sign_extend.sv was successful.
-# 12 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.MIPS_tb
-# Loading work.MIPS
-# Loading work.pc
-# Loading work.instructionmem
-# Loading work.control_sv_unit
-# Loading work.control
-# Loading work.registers
-# Loading work.multiplexer
-# Loading work.ALU
-# Loading work.datamem
-# Loading work.sign_extend
-run
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-# Compile of control.sv was successful.
-# Compile of MIPS.sv was successful.
-# Compile of MIPS_tb.sv was successful.
-# Compile of registers.sv was successful.
-# Compile of registers_tb.sv was successful.
-# Compile of control_tb.sv was successful.
-# Compile of ALU.sv was successful.
-# Compile of datamem.sv was successful.
-# Compile of instructionmem.sv was successful.
-# Compile of multiplexer.sv was successful.
-# Compile of pc.sv was successful.
-# Compile of sign_extend.sv was successful.
-# 12 compiles, 0 failed with no errors.
-restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# Loading work.MIPS_tb
-# Loading work.MIPS
-# Loading work.pc
-# Loading work.instructionmem
-# Loading work.control_sv_unit
-# Loading work.control
-# Loading work.registers
-# Loading work.multiplexer
-# Loading work.ALU
-# Loading work.datamem
-# Loading work.sign_extend
-run
-# GetModuleFileName: No se puede encontrar el módulo especificado.
-# 
-# 
-# End time: 15:45:00 on Sep 18,2021, Elapsed time: 0:07:44
-# Errors: 0, Warnings: 1
