@@ -8,7 +8,7 @@ module datamem (
 	output logic [31:0] R_data
 );
 
-logic [31:0] mem_array [0:255];
+logic [31:0] mem_array [0:511];
 
 	always_ff @ (posedge clk)
 		begin

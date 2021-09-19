@@ -19,7 +19,7 @@ module registers(
 					for(i = 0; i <= 31; i = i+1)
 						mem[i] <= 0;
 				else if (RegWrite)
-					mem[Write_reg] <= Write_data;
+					mem[Write_reg] <= (Write_reg !='0) ? Write_data : '0;
 			end
 			
 		always_comb begin
